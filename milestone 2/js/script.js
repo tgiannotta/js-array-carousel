@@ -36,10 +36,28 @@ for(let i = 0; i < items.length; i++) {
 
     let immagineAttuale = `
     <div class="single-big-image">
-    <img src="${thisPath}" alt="img ${i}">
-    <h3 class="title">${thisTitle}</h3>
-    <p class="text">${thisText}</p>
+        <img src="${thisPath}" alt="img ${i}">
+        <div class="rel">
+            <h3 class="title">${thisTitle}</h3>
+            <p class="text">${thisText}</p> 
+        </div>
     </div>
     `;
     imageContainer.innerHTML += immagineAttuale;
 }
+
+
+
+
+
+/* 
+
+
+<div class="single-big-image">
+                    <img src="img/01.jpg" alt="img-01">
+                    <div class="rel">
+                        <h3 class="title">prova</h3>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem illum debitis? Provident facere cupiditate in, veritatis consequatur</p>
+                    </div>
+                    
+                </div> */
