@@ -21,10 +21,13 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
-
+//Dichiariamo le varie immagini grandi e il thumb
 const imageContainer = document.querySelector('.immagine-grande')
+const thumb = document.querySelector('.thumb');
 
 
+
+//Le carichiamo sul broweser attraverso JS
 for(let i = 0; i < items.length; i++) {
     thisPath = items[i];
     thisTitle = title[i];
@@ -44,20 +47,15 @@ for(let i = 0; i < items.length; i++) {
     </div>
     `;
     imageContainer.innerHTML += immagineAttuale;
+    //dichiaro il Thumb attuale
+    let thumbAttuale = `
+    <div class="single-image">
+        <img src="${thisPath}" alt="${i}">
+    </div>  
+    `
+    thumb.innerHTML += thumbAttuale;
+    //Popolo il Thumb
+
 }
 
 
-
-
-
-/* 
-
-
-<div class="single-big-image">
-                    <img src="img/01.jpg" alt="img-01">
-                    <div class="rel">
-                        <h3 class="title">prova</h3>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem illum debitis? Provident facere cupiditate in, veritatis consequatur</p>
-                    </div>
-                    
-                </div> */
