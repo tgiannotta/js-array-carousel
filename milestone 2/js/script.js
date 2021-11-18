@@ -21,3 +21,25 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
 ]
+
+const imageContainer = document.querySelector('.immagine-grande')
+
+
+for(let i = 0; i < items.length; i++) {
+    thisPath = items[i];
+    thisTitle = title[i];
+    thisText = text[i];
+    console.log(thisPath)
+    console.log(thisTitle)
+    console.log(thisText)
+
+
+    let immagineAttuale = `
+    <div class="single-big-image">
+    <img src="${thisPath}" alt="img ${i}">
+    <h3 class="title">${thisTitle}</h3>
+    <p class="text">${thisText}</p>
+    </div>
+    `;
+    imageContainer.innerHTML += immagineAttuale;
+}
